@@ -60,7 +60,7 @@ function createBox(item,ids) {
               ${item[i].timeframes[ids].current}hrs
               </div>
               <div class="col-6 col-xl-12 text-end text-xl-start mt-xl-1 txt-paleBlue">
-                Last <span id="when">  ${timeEx}</span> - ${ item[i].timeframes[ids].previous }hrs
+                Last <span>  ${timeEx}</span> - ${ item[i].timeframes[ids].previous }hrs
               </div>
             </div>
           </div>
