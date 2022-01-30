@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-attachment: fixed;
+  background: #0f1424;
+  color: #fff;
+  font: 18px "Rubik", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bg-darkBlue {
+  background-color: #1c1f4a;
+}
+
+.bg-profile {
+  background: #5847eb;
+}
+
+.txt-paleBlue {
+  color: #bdc1ff;
+  font-size: 0.8rem;
+}
+
+.profile-img {
+  width: clamp(50px, 100%, 60px);
+}
+.profile .label {
+  color: #bdc1ff;
+  font-size: 0.8rem;
+}
+.profile .user {
+  font-weight: 300;
+}
+.profile .tabs button {
+  font-size: 0.9rem;
+  color: #bdc1ff;
+  width: 90px;
+}
+.profile .tabs button:hover {
+  color: #fff;
+}
+.profile .tabs button.active {
+  color: #fff !important;
+}
+
+.panel,
+.profile {
+  max-width: 350px !important;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.radius {
+  border-radius: inherit !important;
+}
+
+.card {
+  border-radius: 13px;
+}
+.card .card-body {
+  margin-top: -15px;
+}
+.card .card-body:hover:not(.profile .card-body) {
+  cursor: pointer;
+  background: #33387a;
+}
+
+.card.work .card-header {
+  background: 95%/20% url(../images/icon-work.svg) no-repeat, #ff8c66;
+  height: 48px;
+}
+
+.card.play .card-header {
+  background: 95%/20% url(../images/icon-play.svg) no-repeat, #56c2e6;
+  height: 48px;
+}
+
+.card.study .card-header {
+  background: 95%/20% url(../images/icon-study.svg) no-repeat, #ff5c7c;
+  height: 48px;
+}
+
+.card.exercise .card-header {
+  background: 95%/20% url(../images/icon-exercise.svg) no-repeat, #4acf81;
+  height: 48px;
+}
+
+.card.social .card-header {
+  background: 95%/20% url(../images/icon-social.svg) no-repeat, #7536d3;
+  height: 48px;
+}
+
+.card.self-care .card-header {
+  background: 95%/20% url(../images/icon-self-care.svg) no-repeat, #f1c65b;
+  height: 48px;
+}
+
+svg {
+  height: 24px;
+  padding-top: 8px;
+}
+svg:hover {
+  cursor: pointer;
+}
+svg:hover path {
+  fill: #fff;
+}
+
+footer {
+  padding: 25px 0;
+  font-size: 11px;
+  text-align: center;
+  color: #bdc1ff;
+}
+footer a {
+  color: #7536d3;
+}
+
+@media screen and (min-width: 768px) {
+  .profile {
+    max-width: 700px !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width: 720px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 920px;
+  }
+
+  .panel {
+    max-width: 33.33% !important;
+  }
+
+  .profile {
+    height: 405px;
+  }
+}
+
+/*# sourceMappingURL=stilo.css.map */

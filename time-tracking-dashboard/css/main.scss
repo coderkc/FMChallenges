@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+$blue: hsl(246, 80%, 60%);
+
+$lightRed: hsl(15, 100%, 70%); //work
+$softBlue: hsl(195, 74%, 62%); // play
+$red: hsl(348, 100%, 68%); // study
+$green: hsl(145, 58%, 55%); //exercise
+$violet: hsl(264, 64%, 52%); //social
+$orange: hsl(43, 84%, 65%); // self care
+
+$dark: hsl(226, 43%, 10%);
+$darkBlue: hsl(235, 46%, 20%);
+$desaturatedBlue: hsl(236, 41%, 34%);
+$paleBlue: hsl(236, 100%, 87%);
+
+$font: 18px "Rubik", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-attachment: fixed;
+  background: $dark;
+  color: #fff;
+  font: $font;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bg-darkBlue {
+  background-color: $darkBlue;
+}
+
+.bg-profile {
+  background: $blue;
+}
+
+.txt-paleBlue {
+  color: $paleBlue;
+  font-size: 0.8rem;
+}
+
+.profile {
+  &-img {
+    width: clamp(50px, 100%, 60px);
+  }
+
+  .label {
+    color: $paleBlue;
+    font-size: 0.8rem;
+  }
+
+  .user {
+    font-weight: 300;
+  }
+
+  .tabs {
+    & button {
+      font-size: 0.9rem;
+      color: $paleBlue;
+      width: 90px;
+    }
+
+    & button:hover {
+      color: #fff;
+    }
+
+    & button.active {
+      color: #fff !important;
+    }
+  }
+}
+
+.panel,
+.profile {
+  max-width: 350px !important;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.radius {
+  border-radius: inherit !important;
+}
+
+.card {
+  border-radius: 13px;
+
+  .card-body {
+    margin-top: -15px;
+    &:hover:not(.profile .card-body) {
+      cursor: pointer;
+      background: $desaturatedBlue;
+    }
+  }
+}
+
+@mixin cardHeader($class, $color) {
+  .card.#{$class} {
+    .card-header {
+      background: 95%/20% url(../images/icon-#{$class}.svg) no-repeat, #{$color};
+      height: 48px;
+    }
+  }
+}
+
+@each $class,
+  $color
+    in (
+      "work": $lightRed,
+      "play": $softBlue,
+      "study": $red,
+      "exercise": $green,
+      "social": $violet,
+      "self-care": $orange
+    )
+{
+  @include cardHeader(#{$class}, #{$color});
+}
+
+svg {
+  height: 24px;
+  padding-top: 8px;
+  &:hover {
+    cursor: pointer;
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+footer {
+  padding: 25px 0;
+  font-size: 11px;
+  text-align: center;
+  color: $paleBlue;
+
+  a {
+    color: $violet;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .profile {
+    max-width: 700px !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 920px;
+  }
+
+  .panel {
+    max-width: 33.33% !important;
+  }
+
+  .profile {
+    height: 405px;
+  }
+}
