@@ -11,9 +11,8 @@ body {
   background: #0f1424;
   color: #fff;
   font: 18px "Rubik", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  place-items: center;
 }
 
 .bg-darkBlue {
@@ -136,7 +135,7 @@ footer a {
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 920px;
+    width: 1200px;
   }
 
   .panel {
@@ -145,6 +144,9 @@ footer a {
 
   .profile {
     height: 405px;
+  }
+  .profile h1 {
+    font-size: 3rem !important;
   }
 }
 
