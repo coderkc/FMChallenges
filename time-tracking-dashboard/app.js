@@ -20,7 +20,7 @@ function switchTag(e) {
 }
 
 function getData() { 
-  fetch("/data.json")
+  fetch("./data.json")
   .then((response) => response.json())
   .then((data) => createBox(data,ids));
 }
